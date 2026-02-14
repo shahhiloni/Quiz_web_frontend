@@ -5,6 +5,9 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Register from "./Authentication/Register";
 import Login from "./Authentication/Login";
 
+//not Found 
+import NotFound from './Components/NotFound';
+
 // page
 import Home from "./Pages/Home";
 
@@ -17,6 +20,9 @@ const App = () => {
 
       {/* // Pages  */}
       <Route path="/" element={<Home/>} />
+
+      {/* Url not found */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
   )
