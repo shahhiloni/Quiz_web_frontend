@@ -22,7 +22,7 @@ const NotFound = () => {
       </p>
 
       <Link
-        to="/login"
+        to="/"
         style={{
           marginTop: "20px",
           padding: "12px 25px",
@@ -34,7 +34,7 @@ const NotFound = () => {
           transition: "0.3s",
         }}
       >
-        Go to Login
+        Go to Home
       </Link>
     </div>
   );

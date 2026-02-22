@@ -120,7 +120,7 @@ const Register = () => {
           {error.email && <p className="error">{error.email}</p>}
 
           <input
-            type="password"
+            type="text"
             name="password"
             placeholder="Enter your password"
             value={formData.password}
@@ -140,25 +140,22 @@ const Register = () => {
           {error.contact && <p className="error">{error.contact}</p>}
 
           <button type="submit">Register</button>
-          <button
+          {/* <button
             type="reset"
             onClick={() =>
               setFormData({ name: "", email: "", password: "", contact: "" })
             }
           >
             Reset
-          </button>
+          </button> */}
+
         </form>
 
         {message && <p className={isError ? "error" : "success"}>{message}</p>}
 
-       
-        <p className="subtitle" style={{ marginTop: "10px" }}>
-          Already registered?{" "}
-          <Link to="/login" style={{ color: "#007bff", fontWeight: "bold" }}>
-            Login here
-          </Link>
-        </p>
+      <p> Already Registered
+        <Link to="/login"> Login here</Link>
+      </p>
       </div>
     </div>
   );
