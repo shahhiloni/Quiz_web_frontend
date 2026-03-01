@@ -10,6 +10,7 @@ import NotFound from './Components/NotFound';
 
 // page
 import Home from "./Pages/Home";
+import Questions from './Pages/Questions';
 
 const App = () => {
   return (
@@ -20,9 +21,12 @@ const App = () => {
 
       {/* // Pages  */}
       <Route path="/" element={<Home/>} />
+      <Route path='/questions/:id' element={<Questions />} />
+    
 
       {/* Url not found */}
       <Route path="*" element={<NotFound />} />
+      
     </Routes>
   </BrowserRouter>
   )

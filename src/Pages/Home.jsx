@@ -1,22 +1,27 @@
-import React from 'react'
+import { useNavigate } from "react-router-dom";
+import HomeData from "../JSON/HomeData.json";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
-      <div class="container"> 
-      <div class="row">
-        <div class="col-md-4">
-   <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="..." />
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-     <a href="/" class="btn btn-primary">Start Quiz</a>
-  </div>
-</div>
-</div>
-        </div></div>
+      <h4> Hello world </h4>
+{HomeData.Courses.map((course) => (
+  <div key={course.CourseId}
+  onClick={() => navigate(`/questions/${course.CourseId}`)}
+  style={{
+    border: "2px solid black", 
+    padding: '15px', 
+    margin: '15px',
+    cursor: 'pointer'
+  }}
+  >
+    <h3> {course.CourseName}</h3>
+
     </div>
-  )
+    ))}
+    </div>
+  );
 }
 
 export default Home

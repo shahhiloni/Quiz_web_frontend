@@ -1,0 +1,79 @@
+
+{
+"Courses": [
+    {
+        "CourseId": 1,
+        "CourseName": "HTML",
+        "image": "", 
+        "questions": [
+            {
+                "id": 1, 
+                "question": "What does HTML stands for",
+                "option1":"Hyper text markup Language", 
+                "option2":"Hyper transfer markup Language", 
+                "option3": "hvosrncb", 
+                "option4": "spod cishev", 
+                "correctAnswer": "option1"
+            },  {
+                "id": 2, 
+                "question": "What does HTML stands for",
+                "option1":"Hyper text markup Language", 
+                "option2":"Hyper transfer markup Language", 
+                "option3": "hvosrncb", 
+                "option4": "spod cishev", 
+                "correctAnswer": "option1"
+            }
+            
+        ]
+    },  {
+        "CourseId": 2,
+        "CourseName": "CSS",
+        "image": "", 
+        "questions": [
+            {
+                "id": 1, 
+                "question": "What does HTML stands for",
+                "option1":"Hyper text markup Language", 
+                "option2":"Hyper transfer markup Language", 
+                "option3": "hvosrncb", 
+                "option4": "spod cishev", 
+                "correctAnswer": "option1"
+            },  {
+                "id": 2, 
+                "question": "What does HTML stands for",
+                "option1":"Hyper text markup Language", 
+                "option2":"Hyper transfer markup Language", 
+                "option3": "hvosrncb", 
+                "option4": "spod cishev", 
+                "correctAnswer": "option1"
+            }
+            
+        ]
+    },  {
+        "CourseId": 3,
+        "CourseName": "JS",
+        "image": "", 
+        "questions": [
+            {
+                "id": 1, 
+                "question": "What does HTML stands for",
+                "option1":"Hyper text markup Language", 
+                "option2":"Hyper transfer markup Language", 
+                "option3": "hvosrncb", 
+                "option4": "spod cishev", 
+                "correctAnswer": "option1"
+            },  {
+                "id": 2, 
+                "question": "What does HTML stands for",
+                "option1":"Hyper text markup Language", 
+                "option2":"Hyper transfer markup Language", 
+                "option3": "hvosrncb", 
+                "option4": "spod cishev", 
+                "correctAnswer": "option1"
+            }
+            
+        ]
+    }
+
+]
+}
