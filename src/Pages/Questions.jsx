@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import  HomeData from '../JSON/HomeData.json';
+import  HomeData  from '../JSON/HomeData.json';
 
 const Questions = () => {
     const {id} = useParams();
