@@ -1,27 +1,23 @@
-import { useNavigate } from "react-router-dom";
 import HomeData from "../JSON/HomeData.json";
+import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
   return (
     <div>
-      <h4> Hello world </h4>
-{HomeData.Courses.map((course) => (
-  <div key={course.CourseId}
-  onClick={() => navigate(`/questions/${course.CourseId}`)}
-  style={{
-    border: "2px solid black", 
-    padding: '15px', 
-    margin: '15px',
-    cursor: 'pointer'
-  }}
-  >
-    <h3> {course.CourseName}</h3>
+  <h3> ALL Courses </h3>    
+  {HomeData.Courses.map((course) => (
+    <div key={course.CourseId}
+    onClick = {() => navigate(`/questions/${course.CourseId}`)}
+    style={{ border: "2px solid black", padding: "20px", margin: "20px", Course: "pointer"}}>
+<img src={course.image} />
 
+  <h3>{course.CourseName} </h3>
     </div>
-    ))}
-    </div>
-  );
+      ))}
+      </div>
+  )
 }
 
 export default Home

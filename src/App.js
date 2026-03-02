@@ -11,7 +11,6 @@ import NotFound from './Components/NotFound';
 // page
 import Home from "./Pages/Home";
 import Questions from './Pages/Questions';
-
 const App = () => {
   return (
     <BrowserRouter>
@@ -21,7 +20,7 @@ const App = () => {
 
       {/* // Pages  */}
       <Route path="/" element={<Home/>} />
-      <Route path='/questions/:id' element={<Questions />} />
+      <Route path="/questions/:id" element={<Questions />}/>
     
 
       {/* Url not found */}
