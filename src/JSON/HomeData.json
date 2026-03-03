@@ -23,9 +23,9 @@
                 "option4": "spod cishev", 
                 "correctAnswer": "option1"
             }
-            
+
         ]
-    },  {
+    }, {
         "CourseId": 2,
         "CourseName": "CSS",
         "image": "", 
