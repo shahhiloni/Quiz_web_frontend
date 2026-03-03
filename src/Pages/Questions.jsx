@@ -18,7 +18,7 @@ const Questions = () => {
     if (currentQuestionIndex < selectedCourse.questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      alert("Quiz Finished ✅");
+      alert("Quiz Finished");
     }
   };
   return (
