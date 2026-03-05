@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import HomeData from "../JSON/HomeData.json";
+import "../CSS/Questions.css";
 
 const Questions = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -53,16 +54,18 @@ const Questions = () => {
     }
   };
   return (
-    <div>
-      <h2>{selectedCourse.CourseName} Questions</h2>
-
-      <h3>
-        Question {currentQuestionIndex + 1} /{selectedCourse.questions.length}
-      </h3>
-
-      <p>{currentQuestion.question}</p>
-
-      <ul>
+    <div className="quiz-container">
+  
+      <h2 className="quiz-title">{selectedCourse.CourseName} Quiz</h2>
+  
+      <div className="question-count">
+        Question {currentQuestionIndex + 1} / {selectedCourse.questions.length}
+      </div>
+  
+      <p className="question-text">{currentQuestion.question}</p>
+  
+      <ul className="options">
+  
         <li>
           <input
             type="radio"
@@ -72,7 +75,7 @@ const Questions = () => {
           />
           {currentQuestion.option1}
         </li>
-
+  
         <li>
           <input
             type="radio"
@@ -82,7 +85,7 @@ const Questions = () => {
           />
           {currentQuestion.option2}
         </li>
-
+  
         <li>
           <input
             type="radio"
@@ -92,7 +95,7 @@ const Questions = () => {
           />
           {currentQuestion.option3}
         </li>
-
+  
         <li>
           <input
             type="radio"
@@ -102,13 +105,19 @@ const Questions = () => {
           />
           {currentQuestion.option4}
         </li>
+  
       </ul>
-
-      <button onClick={handleSubmit}>Submit Answer</button>
-
-      <button onClick={handleNext} style={{ marginLeft: "10px" }}>
-        Skip
-      </button>
+  
+      <div className="quiz-buttons">
+        <button className="btn submit-btn" onClick={handleSubmit}>
+          Submit Answer
+        </button>
+  
+        <button className="btn skip-btn" onClick={handleNext}>
+          Skip
+        </button>
+      </div>
+  
     </div>
   );
 };
