@@ -25,7 +25,8 @@
             }
 
         ]
-    }, {
+    }, 
+{
         "CourseId": 2,
         "CourseName": "CSS",
         "image": "", 
