@@ -82,3 +82,39 @@
 .result-box h3{
     margin: 10px 0;
 }
+/* Quiz Result Container */
+.quiz-result {
+    width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .quiz-result h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .quiz-result h3 {
+    margin: 10px 0;
+    font-weight: 500;
+    color: #34495e;
+  }
+  
+  .quiz-result .correct {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .quiz-result .wrong {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .quiz-result .total {
+    color: #007bff;
+    font-weight: bold;
+  }

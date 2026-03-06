@@ -37,11 +37,11 @@ const Questions = () => {
 
   if (showResult) {
     return (
-      <div>
+      <div className="quiz-result">
         <h2>Quiz Result</h2>
-        <h3>Total Questions: {selectedCourse.questions.length}</h3>
-        <h3>Correct Answers: {score}</h3>
-        <h3>Wrong Answers: {selectedCourse.questions.length - score}</h3>
+        <h3 className="total">Total Questions: {selectedCourse.questions.length}</h3>
+        <h3 className="correct">Correct Answers: {score}</h3>
+        <h3 className="wrong">Wrong Answers: {selectedCourse.questions.length - score}</h3>
       </div>
     );
   }
