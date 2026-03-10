@@ -1,20 +1,19 @@
 import React from "react";
+import "../CSS/Header.css";
 
 const Header = () => {
   return (
-    <header className="bg-dark text-white py-3">
-      <div className="container d-flex justify-content-between align-items-center">
-        
+    <header className="header">
+      <div className="header-container">
+
+      
         <div className="logo">
-          <h3 className="m-0">QuizMaster</h3>
+          <h2>QuizMaster</h2>
         </div>
 
-        <div className="search-bar w-50">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Search Quiz..."
-          />
+        <div className="search-bar">
+          <input type="text" placeholder="Search Quiz..." />
+          <button>Search</button>
         </div>
 
       </div>

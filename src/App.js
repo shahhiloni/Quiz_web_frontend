@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-
+import Layout from './Components/Layout';
 // Authentication
 import Register from "./Authentication/Register";
 import Login from "./Authentication/Login";
@@ -25,7 +25,8 @@ const App = () => {
       <Route path ="/forget-password" element={<ForgetPassword />} />
 
       {/* // Pages  */}
-      <Route path="/" element={<Home/>} />
+      <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
       <Route path="/feedback" element={<Feedback/>} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/" element={<Home/>} />
@@ -33,7 +34,7 @@ const App = () => {
     
       {/* Url not found */}
       <Route path="*" element={<NotFound />} />
-      
+      </Route>
     </Routes>
   </BrowserRouter>
   )
