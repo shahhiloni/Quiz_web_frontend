@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import HomeData from "../JSON/HomeData.json";
 import "../CSS/Questions.css";
+import axios from "axios";  
 
 const Questions = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -21,20 +22,52 @@ const Questions = () => {
 
   const currentQuestion = selectedCourse.questions[currentQuestionIndex];
 
+  // const handleSubmit = () => {
+  //   if (selectedAnswer === currentQuestion.correctAnswer) {
+  //     setScore(score + 1);
+  //   }
+
+  //   setSelectedAnswer("");
+
+  //   if (currentQuestionIndex < selectedCourse.questions.length - 1) {
+  //     setCurrentQuestionIndex(currentQuestionIndex + 1);
+  //   } else {
+  //     setShowResult(true);
+  //   }
+  // };
+
   const handleSubmit = () => {
+    let newScore = score;
+  
     if (selectedAnswer === currentQuestion.correctAnswer) {
-      setScore(score + 1);
+      newScore = score + 1;
+      setScore(newScore);
     }
-
+  
     setSelectedAnswer("");
-
+  
     if (currentQuestionIndex < selectedCourse.questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
+  
+      const resultData = {
+        courseName: selectedCourse.CourseName,
+        totalQuestions: selectedCourse.questions.length,
+        correctAnswers: newScore,
+        wrongAnswers: selectedCourse.questions.length - newScore
+      };
+  
+      axios.post("http://localhost:4000/api/save-result", resultData)
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+  
       setShowResult(true);
     }
   };
-
   if (showResult) {
     return (
       <div className="quiz-result">
