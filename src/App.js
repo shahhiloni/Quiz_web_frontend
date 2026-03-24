@@ -15,6 +15,7 @@ import Home from "./Pages/Home";
 import Feedback from "./Pages/Feedback";
 import Contact from "./Pages/Contact";
 import Questions from './Pages/Questions';
+import FAQ from "./Pages/FAQ";
 
 const App = () => {
   return (
@@ -32,7 +33,8 @@ const App = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/" element={<Home/>} />
       <Route path="/questions/:id" element={<Questions />}/>
-    
+      <Route path="/faq" element={<FAQ />} />
+          
       {/* Url not found */}
       <Route path="*" element={<NotFound />} />
       </Route>
